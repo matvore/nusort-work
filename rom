@@ -1,0 +1,98 @@
+#!/bin/bash
+
+d=`dirname $0`
+
+<$d/cedict LC_ALL=C \
+sed '
+	/^#/d
+	s/].*//
+	s/ [^ []* \[/ /
+	/^[^ ]*[0-9A-Za-z]/d
+	/['$'\300-\337'',-]/d
+	s/'$'[\340-\377]''/ &/g
+	s/^ //
+' \
+| tr A-Z a-z \
+> /tmp/rawrom.$$
+
+while :; do
+LC_ALL=C perl -e '
+	use warnings;
+	use strict;
+	use v5.26;
+
+	open my $rr, q[<], q['/tmp/rawrom.$$'] or die qq[$!];
+	my %rm;
+	sub addrd {
+		my ($k, $rt) = @_;
+		my $ar = $rm{$k} // q[];
+		$ar =~ /\b${rt}\b/ or $rm{$k} = $ar ? "$ar:$rt" : $rt;
+	}
+	while (my $ln = <$rr>) {
+		chomp $ln;
+		my @cm = split m/ /, $ln;
+		scalar(@cm) == 1 and die "no space on line: $ln\n";
+		if ($cm[1] =~ /[a-z]/) {
+			for my $i (1..$#cm) {
+				addrd $cm[0], $cm[$i];
+			}
+			next;
+		}
+		if (1 == scalar(@cm) % 2) {
+			print STDERR "skipping line: $ln / " . join("+", @cm) . " (length: " . scalar(@cm) . ")\n";
+			next;
+		}
+		my $cn = scalar(@cm) / 2;
+		for my $i (0..$cn-1) {
+			addrd $cm[$i], $cm[$i + $cn];
+		}
+	}
+	# for my $ent (keys %rm) {
+	# 	print "$ent=$rm{$ent}\n";
+	# }
+
+	close $rr;
+
+	while ("上動我在時間並分別以這兩包含新心靈的戴尼提人類而生存" =~ /[\340-\377][\200-\277]+/g) {
+		$rm{$&} = q[];
+	}
+
+	open my $dt, q[<], q['$d/diancht.txt'] or die qq[$!];
+
+	while (my $ln = <$dt>) {
+		chomp $ln;
+
+		my @cln;
+		my $len = 0;
+		my $clc = 0;
+		my @cls = ("\033[31m", "\033[32m", "\033[34m");
+		while ($ln =~ /[\340-\377][\200-\277]+|./g) {
+			my $rd = $rm{$&};	
+			if ($rd) {
+				if ($clc & 0x80) {
+					$clc &= ~0x80;
+				}
+				push @cln, $cls[$clc++ % scalar(@cls)];
+				push @cln, "$rd";
+				$len += length($rd);
+			} else {
+				if ($clc >= 0) {
+					$clc %= scalar(@cls);
+					$clc |= 0x80;
+					push @cln, "\033[0m";
+				}
+				push @cln, $&;
+				$len += length($&) == 1 ? 1 : 2;
+			}
+		}
+		my $jln = join q[], @cln;
+		my $tl = q[];
+
+		if ($len < 240) {
+			$tl = q[ ] x (240 - $len);
+		}
+		print "$jln\033[0m$tl$ln\n";
+	}
+' \
+| less -R +G
+done

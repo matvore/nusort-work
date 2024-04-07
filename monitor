@@ -1,0 +1,27 @@
+#!/bin/sh
+
+echo NOT CHT VALID
+d=`dirname $0`
+
+< $d/diancht.txt \
+iconv -t utf-32be \
+| xxd -p \
+| tr -d '\n' \
+| sed '
+	s/......../&\n/g
+	s/0000[03]0..\n//g
+' \
+| sort -u \
+> /tmp/chtused.$$
+
+diff $d/chtcops /tmp/chtused.$$ \
+| sed '
+	/^> /!d
+	s///
+	s/.*/printf '\''&: \\U&\\n'\''/
+' \
+| /bin/bash
+
+echo
+echo LOWEST PRIORITIES 
+grep -o  ,' '1...., ~/nusort/src/kanji_db.c | sort -u | tail

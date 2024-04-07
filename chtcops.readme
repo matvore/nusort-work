@@ -1,0 +1,11 @@
+Generated with:
+
+sed '/^#/d' horenso/priority/cht	\
+| iconv -t utf-32be			\
+| xxd  -p				\
+| tr -d '\n'				\
+| sed 's/......../&\n/g'		\
+| sort -u				\
+> m/chtcops
+
+And delete the 0000000a (\n) codepoint manually.
