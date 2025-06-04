@@ -24,4 +24,11 @@ diff $d/chtcops /tmp/chtused.$$ \
 
 echo
 echo LOWEST PRIORITIES 
-grep -o  ,' '1...., ~/nusort/src/kanji_db.c | sort -u | tail
+
+grep -o  ', [0-9]\{5\},' ~/nusort/src/kanji_db.c \
+| sort		\
+| uniq -c	\
+| sed 's/,/x/'	> /tmp/monitdups.$$
+
+grep '[2-9] x '	/tmp/monitdups.$$
+tail		/tmp/monitdups.$$

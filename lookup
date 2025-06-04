@@ -1,0 +1,35 @@
+#!/bin/sh
+
+export LC_ALL=C
+
+d=`dirname $0`
+wd=/tmp/`basename $0`.$$
+mkdir $wd
+tail "$@" $d/diancht.txt | tr -d ' \n' >$wd/src
+
+mkfifo $wd/terms
+mkfifo $wd/sortdict
+
+for i in `seq 3 15`; do
+	for j in `seq 0 $(( i - 1 ))`; do
+		dd if=$wd/src iseek=${j}B status=none	\
+		| sed 's/.\{'$i'\}/&@/g; s/[^@]$/&@/'
+	done
+done | tr '@' '\n' | sort -u >>$wd/terms &
+
+sort $d/cedict >>$wd/sortdict &
+
+join -t ' ' -j 1 $wd/terms $wd/sortdict | sed '
+	/^... /{
+		s//Y &/;
+		b;
+	}
+	/^...... /{
+		s//X &/;
+		b;
+	}
+	s/^/W /;
+' | sort | sed '
+	s/^[WXY] //;
+	s/ [^ ]*//;
+'

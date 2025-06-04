@@ -53,7 +53,7 @@ LC_ALL=C perl -e '
 
 	close $rr;
 
-	while ("上動我在時間並分別以這兩包含新心靈的戴尼提人類而生存" =~ /[\340-\377][\200-\277]+/g) {
+	while ("聽析員知道自己很簡不使用藥物上動我在時間並分別以這兩包含新心靈的戴尼提人類而生存" =~ /[\340-\377][\200-\277]+/g) {
 		$rm{$&} = q[];
 	}
 
@@ -79,7 +79,7 @@ LC_ALL=C perl -e '
 				if ($clc >= 0) {
 					$clc %= scalar(@cls);
 					$clc |= 0x80;
-					push @cln, "\033[0m";
+					push @cln, "\033[36m";
 				}
 				push @cln, $&;
 				$len += length($&) == 1 ? 1 : 2;
@@ -91,7 +91,7 @@ LC_ALL=C perl -e '
 		if ($len < 240) {
 			$tl = q[ ] x (240 - $len);
 		}
-		print "$jln\033[0m$tl$ln\n";
+		print "$tl$jln\033[0m $ln\n";
 	}
 ' \
 | less -R +G
