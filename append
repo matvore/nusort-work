@@ -1,0 +1,19 @@
+#!/bin/sh
+
+f=`dirname $0`/diancht.txt
+
+while true; do
+	for i in - - - -; do
+		tr '\000' '.' </dev/zero 2>/dev/null	\
+		| head -c 80
+		echo
+	done
+
+	tail -f $f & tp=$!
+	echo 'ctrl+d to fix' >&2
+
+	cat >/dev/null
+	kill $tp
+
+	vim -nC $f
+done

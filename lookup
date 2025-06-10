@@ -5,7 +5,7 @@ export LC_ALL=C
 d=`dirname $0`
 wd=/tmp/`basename $0`.$$
 mkdir $wd
-tail "$@" $d/diancht.txt | tr -d ' \n' >$wd/src
+tail "$@" $d/diancht.txt | tr -d ' \t\n' >$wd/src
 
 mkfifo $wd/terms
 mkfifo $wd/sortdict
@@ -20,6 +20,7 @@ done | tr '@' '\n' | sort -u >>$wd/terms &
 sort $d/cedict >>$wd/sortdict &
 
 join -t ' ' -j 1 $wd/terms $wd/sortdict | sed '
+	s/ [^ ]*//
 	/^... /{
 		s//Y &/;
 		b;
@@ -30,6 +31,5 @@ join -t ' ' -j 1 $wd/terms $wd/sortdict | sed '
 	}
 	s/^/W /;
 ' | sort | sed '
-	s/^[WXY] //;
-	s/ [^ ]*//;
+	s/^[WXY] //
 '

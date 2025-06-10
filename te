@@ -1,0 +1,10 @@
+#!/bin/sh
+
+export LC_ALL=C
+
+( make -j 12 2>&1 ; echo result: $? >&2 )	\
+| tr '\t' @					\
+| sed '
+	/^>[ @]*diff /!d
+	s//diff /
+' | /bin/sh

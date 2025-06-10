@@ -1,0 +1,23 @@
+#!/bin/bash
+
+p=/tmp/nusortinput.$$
+
+mkfifo $p
+
+out=`dirname $0`/diancht.txt
+
+# | grep --line-buffered -ao		\
+# 	'@\]52;c;[0-9A-Za-z+/]*=*$'	\
+
+<$p tr '\033\007' '@\n'			\
+| sed -u 				'
+	/.*@]52;c;\([0-9a-zA-Z+\/]*=*\)$/!d
+	s,,( echo \1 | base64 -d; echo ) >>'$out',
+'					\
+| /bin/sh				&
+
+~/nusort/src/nusort input	--no-kanji-nums			\
+	--pack-kakko		--allow-left-bracket-key1	\
+	--busy-right-pinky	--romazi-optimize-keystrokes	\
+	--no-classic-wo		--hiragana-wo-key "'"		\
+| tee $p
