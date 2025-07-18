@@ -1,0 +1,25 @@
+#!/bin/sh
+
+test -f addme || exit 1
+
+if ! test -f before.db; then
+	( cd ~/nusort; ~/nusort/nusort or ) >before.db || exit 1
+fi
+if ! test -f mix.db; then
+	( cat before.db ; sed 's/^/\t{/' addme ) | sort -s -k 6 >mix.db
+fi
+
+test -f after.db ||
+<mix.db awk -F, '
+BEGIN { OFS="," }
+{
+	if ($3 == " ?") {
+		if (pri != $6) $3 = " 1"; else $3 = " 0";
+	}
+	pri = $6;
+	$6 = "";
+	print;
+}' >after.db
+
+test -f newresid ||
+<mix.db sed 's/.*}, //' | sort -u | sed 's/..//; s/.*/0x&,/' >newresid
