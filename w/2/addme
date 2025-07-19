@@ -273,91 +273,91 @@
 "磤", 12287, ?, 3, 0}, 710a
 "鮖", 11815, ?, 2, 0}, c405
 "磦", 12335, ?, 4, 0}, 710b
-"磛", 12025, ?, 0, 2}, C710b,Z710b [chan2] /cliff/peak/
-"磪", 12026, ?, 0, 2}, C710b,Z710b [cui1] /a high mountain/precipitous/
-"磡", 12336, ?, 4, 0}, C710b,Z710b [kan4] /dangerous sea-cliff/
-"磠", 12337, ?, 4, 0}, C710b,Z710b [lu3] /sal ammoniac/
-"磧", 11776, ?, 2, 2}, C710b,Z710b [qi4] /(bound form) moraine; rocks in shallow water/
-"磬", 11726, ?, 2, 1}, C710b,Z710b [qing4] /chime stones, ancient percussion instrument made of stone or jade pieces hung in a row and struck as a xylophone/
-"磚", 11727, ?, 2, 1}, C710b,Z710b [zhuan1] /brick/tile (floor or wall, not roof)/CL:塊|块[kuai4]/
-"禩", 12338, ?, 4, 0}, C720b,Z720c [si4] /variant of 祀[si4]/
-"麇", 12027, ?, 0, 2}, C740b,Cc705,Zc705 [jun1] /hornless deer/
-"穈", 12028, ?, 0, 2}, C740b,Cc905,Z740b [men2] /porridge/rice sprouts/
-"穄", 12029, ?, 0, 2}, C740b,Z740b [ji4] /(millet)/
-"穇", 12339, ?, 4, 0}, C740b,Z740b [shan1] /panicum frumentaceum/
-"窵", 12030, ?, 0, 2}, C750b,Cc505,Z750b [diao4] /(literary) distant/deep/profound/
-"鴪", 11816, ?, 2, 0}, C750b,Cc505,Zc505 [yu4] /old variant of 鴥[yu4]/
-"䆴", 12340, ?, 4, 0}, C750b,Cd605
-"窹", 12341, ?, 4, 0}, C750b,Z750b
-"窼", 12342, ?, 4, 0}, C750b,Z750b
-"窻", 12288, ?, 3, 0}, C750b,Z750b [chuang1] /variant of 窗[chuang1]/
-"窶", 11777, ?, 2, 2}, C750b,Z750b [ju4] /poor/rustic/
-"鴗", 11948, ?, 4, 2}, C760b,Cc505,Zc505 [li4] /Alcedo bengalensis/
-"簏", 11949, ?, 4, 2}, C770b,Cc706,Z770b [lu4] /box/basket/
-"簔", 11817, ?, 2, 0}, C770b,V7709,V770a,Z770b
-"簓", 11818, ?, 2, 0}, C770b,Z770b
-"簎", 11950, ?, 4, 2}, C770b,Z770b
-"篸", 12031, ?, 0, 2}, C770b,Z770b
-"簂", 12032, ?, 0, 2}, C770b,Z770b
-"篳", 11778, ?, 2, 2}, C770b,Z770b [bi4] /wicker/
-"篰", 12343, ?, 4, 0}, C770b,Z770b [bu4] /sieve-like utensil/
-"簇", 11728, ?, 2, 1}, C770b,Z770b [cu4] /(bound form) to cluster; to pile up/cluster; pile/classifier for bunches, clusters, piles etc/
-"篴", 12033, ?, 0, 2}, C770b,Z770b [di2] /flute/
-"簋", 11951, ?, 4, 2}, C770b,Z770b [gui3] /ancient bronze food vessel with a round mouth and two or four handles/round basket of bamboo/
-"篲", 12034, ?, 0, 2}, C770b,Z770b [hui4] /variant of 彗[hui4]/
-"簍", 11729, ?, 2, 1}, C770b,Z770b [lou3] /basket/
-"篾", 11868, ?, 0, 1}, C770b,Z770b [mie4] /the outer layer of a stalk of bamboo (or reed or sorghum); a thin bamboo strip/
-"篷", 11730, ?, 2, 1}, C770b,Z770b [peng2] /sail/
-"簌", 12035, ?, 0, 2}, C770b,Z770b [su4] /used in 簌簌[su4su4]/
-"篹", 12036, ?, 0, 2}, C770b,Z770b [suan3] /ancient bamboo basket for food/variant of 匴[suan3]/bamboo container for hats/
-"簁", 11890, ?, 3, 2}, C770b,Z770b [xi3] /sieve/to sift, to strain/
-"篶", 11819, ?, 2, 0}, C770b,Z770b [yan1] /black bamboo/
-"簃", 11952, ?, 4, 2}, C770b,Z770b [yi2] /small house connected to large one/
-"簉", 12037, ?, 0, 2}, C770b,Z770b [zao4] /deputy/subordinate/concubine/
-"糢", 11731, ?, 2, 1}, C780a,Z780b [mo2] /blurred/
-"麋", 11732, ?, 2, 1}, C780b,Cc706,Zc706 [Mi2] /surname Mi/
-"糜", 11733, ?, 2, 1}, C780b,Cc906,Z780b [Mi2] /surname Mi/
-"糙", 11844, ?, 3, 1}, C780b,Z780b [cao1] /rough/coarse (in texture)/
-"糝", 11891, ?, 3, 2}, C780b,Z780b [san3] /to mix (of powders)/
-"繁", 12289, ?, 3, 0}, C790b
-"縻", 11779, ?, 2, 2}, C790b,Cc906,Z790b [mi2] /to tie up/
-"縵", 11780, ?, 2, 2}, C790b,V790b,V790b,Z790b [man4] /plain thin silk/slow/unadorned/
-"縧", 12344, ?, 4, 0}, C790b,Z790a [tao1] /variant of 絛|绦[tao1]/
-"縬", 12345, ?, 4, 0}, C790b,Z790b
-"繆", 11734, ?, 2, 1}, C790b,Z790b [Miao4] /surname Miao/
-"縭", 12038, ?, 0, 2}, C790b,Z790b [li2] /bridal veil or kerchief/
-"縹", 11781, ?, 2, 2}, C790b,Z790b [piao1] /used in 縹渺|缥渺[piao1 miao3]/Taiwan pr. [piao3]/
-"繅", 11854, ?, 4, 1}, C790b,Z790b [sao1] /to reel silk from cocoons/
-"縿", 12039, ?, 0, 2}, C790b,Z790b [shan1] /fringe/ornament of banner/
-"繇", 11892, ?, 3, 2}, C790b,Z790b [yao2] /folk-song/forced labor/
-"繄", 12040, ?, 0, 2}, C790b,Z790b [yi1] /interj./sighing sound/
-"縶", 12041, ?, 0, 2}, C790b,Z790b [zhi2] /to connect/to tie up/
-"縳", 12042, ?, 0, 2}, C790b,Z790b [zhuan4] /to tie up/
-"縱", 11735, ?, 2, 1}, C790b,Z790b [zong4] /vertical; north-south (Taiwan pr. [zong1])/from front to back; longitudinal; lengthwise (Taiwan pr. [zong1])/military unit corresponding to an army corps (Taiwan pr. [zong1])/(bound form) to release (a captive)/to indulge/to leap up/(literary) even if/
-"繈", 12043, ?, 0, 2}, C790b,Z790c [qiang3] /cloth for carrying baby on back/
-"罄", 11855, ?, 4, 1}, C7a0b,Z7a0b [qing4] /to use up/to exhaust/empty/
-"罅", 11782, ?, 2, 2}, C7a0b,Z7a0b [xia4] /crack/grudge/
-"翲", 11953, ?, 4, 2}, C7d0b,Z7d0b
-"鮱", 12346, ?, 4, 0}, C7e0b,Cc406,Zc406
-"鮞", 11893, ?, 3, 2}, C7f0b,Cc406,Zc406 [er2] /caviar/fish roe/
-"鴯", 12044, ?, 0, 2}, C7f0b,Cc506,Zc506 [er2] /used in 鴯鶓|鸸鹋[er2miao2]/
-"耬", 11954, ?, 4, 2}, C800b,Z800b [lou2] /drill for sowing grain/
-"鵈", 11820, ?, 2, 0}, C810b,Cc506,V810b,Vc506,Zc506
-"聱", 11856, ?, 4, 1}, C810b,V810b,Z810b [ao2] /difficult to pronounce/
-"膢", 12045, ?, 0, 2}, C830b,Z830b
-"膘", 11955, ?, 4, 2}, C830b,Z830b [biao1] /(usu. of livestock) fat/
-"膓", 11821, ?, 2, 0}, C830b,Z830b [chang2] /old variant of 腸|肠[chang2]/
-"膕", 11783, ?, 2, 2}, C830b,Z830b [guo2] /knee pit/popliteal fossa (medicine)/
-"膛", 11869, ?, 0, 1}, C830b,Z830b [tang2] /(bound form) hollow space/
-"膞", 12046, ?, 0, 2}, C830b,Z830b [zhuan1] /(dialect) gizzard/
-"賾", 11894, ?, 3, 2}, C840b,C9b0b,Z9b0b [ze2] /mysterious/
-"鵄", 11822, ?, 2, 0}, C860b,Cc506,Zc506
-"鴰", 12047, ?, 0, 2}, C880b,Cc506,Zc506 [gua1] /used in 老鴰|老鸹[lao3gua5]/
-"鵃", 11895, ?, 3, 2}, C8a0b,Cc506,Zc506 [zhou1] /used in 鶻鵃|鹘鸼[gu3zhou1]/
-"艝", 11823, ?, 2, 0}, C8a0b,Z8a0b
-"𦪌", 12347, ?, 4, 0}, C8a0b,Z8a0b
-"艚", 11824, ?, 2, 0}, C8a0b,Z8a0b [cao2] /seagoing junk/
-"艜", 12348, ?, 4, 0}, C8a0b,Z8a0b [dai4] /a long narrow vessel with two masts/
+"磛", 12025, ?, 0, 2}, 710b
+"磪", 12026, ?, 0, 2}, 710b
+"磡", 12336, ?, 4, 0}, 710b
+"磠", 12337, ?, 4, 0}, 710b
+"磧", 11776, ?, 2, 2}, 710b
+"磬", 11726, ?, 2, 1}, 710b
+"磚", 11727, ?, 2, 1}, 710b
+"禩", 12338, ?, 4, 0}, 720b
+"麇", 12027, ?, 0, 2}, c705
+"穈", 12028, ?, 0, 2}, 740b
+"穄", 12029, ?, 0, 2}, 740b
+"穇", 12339, ?, 4, 0}, 740b
+"窵", 12030, ?, 0, 2}, 750b
+"鴪", 11816, ?, 2, 0}, c505
+"䆴", 12340, ?, 4, 0}, 750b
+"窹", 12341, ?, 4, 0}, 750b
+"窼", 12342, ?, 4, 0}, 750b
+"窻", 12288, ?, 3, 0}, 750b
+"窶", 11777, ?, 2, 2}, 750b
+"鴗", 11948, ?, 4, 2}, c505
+"簏", 11949, ?, 4, 2}, 770b
+"簔", 11817, ?, 2, 0}, 770b
+"簓", 11818, ?, 2, 0}, 770b
+"簎", 11950, ?, 4, 2}, 770b
+"篸", 12031, ?, 0, 2}, 770b
+"簂", 12032, ?, 0, 2}, 770b
+"篳", 11778, ?, 2, 2}, 770b
+"篰", 12343, ?, 4, 0}, 770b
+"簇", 11728, ?, 2, 1}, 770b
+"篴", 12033, ?, 0, 2}, 770a+
+"簋", 11951, ?, 4, 2}, 770b
+"篲", 12034, ?, 0, 2}, 770b
+"簍", 11729, ?, 2, 1}, 770b
+"篾", 11868, ?, 0, 1}, 770b
+"篷", 11730, ?, 2, 1}, 770a+
+"簌", 12035, ?, 0, 2}, 770b
+"篹", 12036, ?, 0, 2}, 770a+
+"簁", 11890, ?, 3, 2}, 770b
+"篶", 11819, ?, 2, 0}, 770b
+"簃", 11952, ?, 4, 2}, 770b
+"簉", 12037, ?, 0, 2}, 770a+
+"糢", 11731, ?, 2, 1}, 780a
+"麋", 11732, ?, 2, 1}, c706
+"糜", 11733, ?, 2, 1}, 780b
+"糙", 11844, ?, 3, 1}, 780a+
+"糝", 11891, ?, 3, 2}, 780b
+"繁", 12289, ?, 3, 0}, 790b
+"縻", 11779, ?, 2, 2}, 790b
+"縵", 11780, ?, 2, 2}, 790b
+"縧", 12344, ?, 4, 0}, 790b
+"縬", 12345, ?, 4, 0}, 790b
+"繆", 11734, ?, 2, 1}, 790b
+"縭", 12038, ?, 0, 2}, 790b
+"縹", 11781, ?, 2, 2}, 790b
+"繅", 11854, ?, 4, 1}, 790b
+"縿", 12039, ?, 0, 2}, 790b
+"繇", 11892, ?, 3, 2}, 790b
+"繄", 12040, ?, 0, 2}, 790b
+"縶", 12041, ?, 0, 2}, 790b
+"縳", 12042, ?, 0, 2}, 790b
+"縱", 11735, ?, 2, 1}, 790b
+"繈", 12043, ?, 0, 2}, 790b
+"罄", 11855, ?, 4, 1}, 7a0b
+"罅", 11782, ?, 2, 2}, 7a0b
+"翲", 11953, ?, 4, 2}, 7d0b
+"鮱", 12346, ?, 4, 0}, c406
+"鮞", 11893, ?, 3, 2}, c406
+"鴯", 12044, ?, 0, 2}, c506
+"耬", 11954, ?, 4, 2}, 800b
+"鵈", 11820, ?, 2, 0}, c506
+"聱", 11856, ?, 4, 1}, 810b
+"膢", 12045, ?, 0, 2}, 830b
+"膘", 11955, ?, 4, 2}, 830b
+"膓", 11821, ?, 2, 0}, 830b
+"膕", 11783, ?, 2, 2}, 830b
+"膛", 11869, ?, 0, 1}, 830b
+"膞", 12046, ?, 0, 2}, 830b
+"賾", 11894, ?, 3, 2}, 840b
+"鵄", 11822, ?, 2, 0}, c506
+"鴰", 12047, ?, 0, 2}, c506
+"鵃", 11895, ?, 3, 2}, c506
+"艝", 11823, ?, 2, 0}, 8a0b
+"𦪌", 12347, ?, 4, 0}, 8a0b
+"艚", 11824, ?, 2, 0}, 8a0b
+"艜", 12348, ?, 4, 0}, 8a0b
 "虧", 11736, ?, 2, 1}, C8e0b,Z8e0b [kui1] /to lose (money); to have a deficit/to be deficient/to treat unfairly/luckily; fortunately; thanks to/(used to introduce an ironic remark about sb who has fallen short of expectations)/
 "蟒", 11737, ?, 2, 1}, C8f09,V8f0a,V8f0b,Z8f0d [mang3] /python/
 "𧏾", 12349, ?, 4, 0}, C8f0a,Z8f0b
