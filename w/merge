@@ -6,7 +6,7 @@ if ! test -f before.db; then
 	( cd ~/nusort; ~/nusort/nusort or ) >before.db || exit 1
 fi
 if ! test -f mix.db; then
-	( cat before.db ; sed 's/^/\t{/' addme ) | sort -s -k 6 >mix.db
+	( cat before.db ; sed 's/^/\t{/; s/+$//' addme ) | sort -s -k 6 >mix.db
 fi
 
 test -f after.db ||
@@ -22,4 +22,8 @@ BEGIN { OFS="," }
 }' >after.db
 
 test -f newresid ||
-<mix.db sed 's/.*}, //' | sort -u | sed 's/..//; s/.*/0x&,/' >newresid
+<mix.db sed 's/.*}, //' | sort -u | sed '
+	s/..//
+	s/.*/0x&,/
+	s/^0x00/@&/
+' | tr -d '\n' | tr @ '\n' >newresid
