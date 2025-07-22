@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export LC_ALL=C
+
 test -f addme || exit 1
 
 if ! test -f before.db; then
@@ -9,7 +11,7 @@ if ! test -f mix.db; then
 	(
 		cat before.db
 		<addme sed '
-			s/^/\t{/
+			s/^"*\([^", ]*\)"*,* /\t{"\1", /
 			s/+$//
 			s/ ?,/ #,/
 		'
