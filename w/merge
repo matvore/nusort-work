@@ -25,9 +25,9 @@ test -f after.db ||
 BEGIN { OFS="," }
 {
 	if ($3 == " #") {
-		if (pri != $6) $3 = " 1"; else $3 = " 0";
+		if (pri != ($6 "")) $3 = " 1"; else $3 = " 0";
 	}
-	pri = $6;
+	pri = ($6 "");
 	$6 = "";
 	print;
 }' >after.db
