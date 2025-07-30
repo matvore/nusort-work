@@ -1,0 +1,4 @@
+~/nusort/nusort input		--no-kanji-nums			\
+	--pack-kakko		--allow-left-bracket-key1	\
+	--busy-right-pinky	--romazi-optimize-keystrokes	\
+	--no-classic-wo		--hiragana-wo-key "'"
