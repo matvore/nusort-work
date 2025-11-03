@@ -4,6 +4,12 @@ export LC_ALL=C
 
 test -f addme || exit 1
 
+ksort () {
+	sort -k 6 -k 3,3r -k 1,1 "$@"
+}
+
+make -C ~/nusort nusort || exit 1
+
 if ! test -f before.db; then
 	( cd ~/nusort; ~/nusort/nusort or ) >before.db || exit 1
 fi
@@ -13,11 +19,8 @@ if ! test -f mix.db; then
 		<addme sed '
 			s/^"*\([^", ]*\)"*,* /\t{"\1", /
 			s/+$//
-			s/ ?,/ #,/
 		'
-	)					\
-	| LC_ALL=C sort -k 6 -k 3,3r -k 1,1	\
-	>mix.db
+	) | sed 's/\(, [ 0-9]\{5\}, \)[0?],/\1#,/' | ksort >mix.db
 fi
 
 test -f after.db ||
@@ -28,7 +31,7 @@ BEGIN { OFS="," }
 		if (pri != ($6 "")) $3 = " 1"; else $3 = " 0";
 	}
 	pri = ($6 "");
-	$6 = "";
+	$6 = ""; # sed s/, [0-f]\{4\}$/,/
 	print;
 }' >after.db
 
