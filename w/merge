@@ -16,7 +16,7 @@ fi
 if ! test -f mix.db; then
 	(
 		cat before.db
-		<addme sed '
+		<addme tr -d '' | sed '
 			s/^"*\([^", ]*\)"*,* /\t{"\1", /
 			s/+$//
 		'
