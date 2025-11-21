@@ -1,8 +1,6 @@
 #!/bin/sh
 
-am=`dirname $0`/addme
-
-test -e $am && exit
+test -e addme && exit
 
 allns						\
 | grep -ow [CVZ]'[0-f]\{4\}\|[0-f]\{4\}$'	\
@@ -23,4 +21,4 @@ BEGIN { sep = "" }
 
 { f[$1 ""] = 1; }'				\
 | tee /tmp/rsc.$$				\
-| xargs -0 ~/nusort/u/missingwithpri		>$am
+| xargs -0 ~/nusort/u/missingwithpri		>addme
