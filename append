@@ -1,6 +1,6 @@
 #!/bin/sh
 
-f=`dirname $0`/diancht.txt
+f="$NWORK_FILE"
 
 while true; do
 	for i in - - - -; do

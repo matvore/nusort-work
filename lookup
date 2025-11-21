@@ -5,7 +5,7 @@ export LC_ALL=C
 d=`dirname $0`
 wd=/tmp/`basename $0`.$$
 mkdir $wd
-tail "$@" $d/diancht.txt | tr -d ' \t\n' >$wd/src
+tail "$@" "$NWORK_FILE" | tr -d ' \t\n' >$wd/src
 
 mkfifo $wd/terms
 mkfifo $wd/sortdict

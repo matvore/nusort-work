@@ -3,10 +3,10 @@
 echo NOT CHT VALID
 d=`dirname $0`
 
-< $d/diancht.txt \
-iconv -t utf-32be \
-| xxd -p \
-| tr -d '\n' \
+< "$NWORK_FILE"		\
+iconv -t utf-32be	\
+| xxd -p		\
+| tr -d '\n'		\
 | sed '
 	s/......../&\n/g
 	s/0000[03]0..\n//g

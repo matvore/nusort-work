@@ -57,7 +57,7 @@ LC_ALL=C perl -e '
 		$rm{$&} = q[];
 	}
 
-	open my $dt, q[<], q['$d/diancht.txt'] or die qq[$!];
+	open my $dt, q[<], q['$NWORK_FILE'] or die qq[$!];
 
 	while (my $ln = <$dt>) {
 		chomp $ln;

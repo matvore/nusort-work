@@ -4,7 +4,7 @@ p=/tmp/nusortinput.$$
 
 mkfifo $p
 
-out=`dirname $0`/diancht.txt
+out="$NWORK_FILE"
 
 # | grep --line-buffered -ao		\
 # 	'@\]52;c;[0-9A-Za-z+/]*=*$'	\
