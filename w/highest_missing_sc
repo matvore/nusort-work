@@ -19,6 +19,11 @@ BEGIN { sep = "" }
 	}
 }
 
-{ f[$1 ""] = 1; }'				\
-| tee /tmp/rsc.$$				\
-| xargs -0 ~/nusort/u/missingwithpri		>addme
+{ f[$1 ""] = 1; }'				>/tmp/rsc.$$
+
+if test 0 = `wc -c </tmp/rsc.$$`; then
+	touch addme
+else
+	</tmp/rsc.$$ xargs -0 ~/nusort/u/missingwithpri	\
+	>addme
+fi
