@@ -1,13 +1,13 @@
 #!/bin/sh
 
 f="$NWORK_FILE"
+bu=/tmp/ns-append-backup.$$
+
+export LC_ALL=C.utf8
 
 while true; do
-	for i in - - - -; do
-		tr '\000' '.' </dev/zero 2>/dev/null	\
-		| head -c 80
-		echo
-	done
+	dd status=none if=/dev/zero count=320B	\
+	| sed 's/./-/g; s/-\{80\}/&\n/g'
 
 	tail -f $f & tp=$!
 	echo 'ctrl+d to fix' >&2
@@ -16,4 +16,8 @@ while true; do
 	kill $tp
 
 	vim -nC $f
+
+	mv $f $bu.$RANDOM
+
+	( sed '$d' $bu.$RANDOM; tail -1 $bu.$RANDOM | tr -d '\n' ) > $f
 done
