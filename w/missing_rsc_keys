@@ -1,0 +1,30 @@
+#!/bin/sh
+
+test -e addme && exit
+
+allns						\
+| grep -ow [CVZ]'[0-f]\{4\}\|[0-f]\{4\}$'	\
+| sed '
+	s/^\(....\)$/\1 ~/
+	s/\([CVZ]\)\(....\)/\2 \1/
+'						\
+| LC_ALL=C sort -r -u				\
+| awk '
+	BEGIN { sep = "" }
+
+	/[CVZ]/ {
+		if (!f[$1 ""]) {
+			printf "%s[CVZ]%s", sep, $1;
+			sep = "\\|";
+		}
+	}
+
+	{ f[$1 ""] = 1; }
+' >/tmp/mrsc.$$
+
+if test 0 = `wc -c </tmp/mrsc.$$`; then
+	touch addme
+else
+	</tmp/mrsc.$$ xargs -0 ~/nusort/u/missingwithpri	\
+	>addme
+fi
