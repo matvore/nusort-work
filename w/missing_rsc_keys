@@ -2,7 +2,9 @@
 
 test -e addme && exit
 
-allns						\
+ndir=$HOME/nusort
+
+$ndir/u/allji					\
 | grep -ow [CVZ]'[0-f]\{4\}\|[0-f]\{4\}$'	\
 | sed '
 	s/^\(....\)$/\1 ~/
@@ -23,8 +25,7 @@ allns						\
 ' >/tmp/mrsc.$$
 
 if test 0 = `wc -c </tmp/mrsc.$$`; then
-	touch addme
+	cat
 else
-	</tmp/mrsc.$$ xargs -0 ~/nusort/u/missingwithpri	\
-	>addme
-fi
+	xargs -0 $ndir/u/missingwithpri
+fi </tmp/mrsc.$$ >addme
